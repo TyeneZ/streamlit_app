@@ -42,9 +42,4 @@ streamlit.dataframe(my_data_rows)
 
 #Allow end user to add a fruit
 fruit_choice = streamlit.text_input('What fruit would you like to add?', 'Fruit here')
-my_cur = my_cnx.cursor()
-my_cur.execute("INSERT INTO fruit_load_list VALUES fruit_choice")
 streamlit.write('The user entered',fruit_choice)
-my_cur.execute("SELECT * FROM fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.dataframe(my_data_rows)
