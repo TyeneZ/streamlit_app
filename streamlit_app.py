@@ -41,7 +41,6 @@ try:
 except URLError as e:
     streamlit.error()
   
-streamlit.stop()
 
 def insert_row_snowflake(new_fruit): 
     with my_cnx.cursor() as my_cur: 
